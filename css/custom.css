@@ -1,0 +1,26 @@
+.form-group {
+	font-family: 'Slabo 27px', serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1pt;
+}
+
+
+
+/* gutter */
+.gutter-60 > [class*='col-'] {
+    padding-right:30px;
+    padding-left:30px;
+}
+
+
+/* CANVAS'S */
+#canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid black
+}
+
+#canvas_print{
+	display: none;
+}

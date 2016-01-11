@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Calligraphy guideline maker</title>
+
+<!-- Bootstrap -->
+	<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Custom CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/social-sharing.css" rel="stylesheet">
+
+<!-- Third Party CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css' />
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">guideline maker</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">How to Use</a></li>
+        <li><a href="#">Help us</a></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+			<!-- Twitter -->
+			<a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>        
+        </li>
+        <li>
+        	<!-- Facebook -->
+			<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<!-- Container 1 -->
+
+	<div class="container">
+		<div class="row gutter-60">
+
+<!-- begin of column 1 -->
+			<div class="col-sm-2">
+
+				<form class="form-horizontal">
+
+					<div class="form-group">
+    					<label for="angle_box">Angle</label>
+    					<input type="number" min="0" max="90" class="form-control" id="angle_box" placeholder="degrees">
+					</div>
+
+					<div class="form-group">
+						<label for="nible_width_box">Nible Width</label>
+						<input type="number" class="form-control" id="nible_width_box" placeholder="millimeters">
+					</div>
+
+					<div class="form-group">
+						<label for="ascender_box">Ascender</label>		
+						<input type="number" min="0" class="form-control" id="ascender_box" placeholder="nibs">
+					</div>
+
+					<div class="form-group">
+						<label for="x_height_box">X-height</label>	
+						<input type="number" min="0" class="form-control" id="x_height_box" placeholder="nibs">
+					</div>
+
+					<div class="form-group">
+						<label for="descender_box">Descender</label>
+						<input type="number" min="0" class="form-control" id="descender_box" placeholder="nibs">
+					</div>
+
+					<div class="form-group">
+						<label for="paper_size_box">Paper Size</label>
+						<select class="form-control" id="paper_size_box">
+							<option value='A3'>A3</option>
+							<option value='A4'>A4</option>
+							<option value='letter'>Letter</option>
+							<option value='legal'>Legal</option>
+						</select>
+					</div>
+				
+				</form>
+				<button type="button" class="btn btn-default btn-block" id="refresh_button" aria-label="refresh">
+  				<span class="glyphicon glyphicon glyphicon-refresh" aria-hidden="true"></span>
+				</button>
+
+				<button type="button" class="btn btn-default btn-block" id="print_button">Print</button>
+
+			</div>
+<!-- end of column 1 -->
+
+<!-- begin of column 2 -->
+			<div class="col-sm-10">
+
+				<canvas id="canvas" width="1122.519685039" height="453.543307087"></canvas>
+				<canvas id="canvas_print" width="1122.519685039" height="453.543307087"></canvas>
+
+			</div>
+		</div>
+<!-- end of container 1 -->
+	</div>
+
+	<div class="jumbotron">
+  		<div class="container">
+    	<h1>About</h1>
+    	<p>The idea for this page came from laziness to design different guidelines every time I wanted to practice a new alphabet or when I changed the size of the nib. Also came through my motivation to try to understand a new programming language for me (Javascript). The first prototype of this application was developed in the great DrawBot tool and then transferred to Canvas by using another fantastic tool, Codepen. All code is open and can be used by anyone, as long as the proper credit is given.</p>
+		<P>Developed by brothers Filipe Negrão and Lucas Negrão between Christmas and New Year Eve of 2015.</p>
+  		</div>
+	</div>
+
+	<div class="jumbotron">
+  		<div class="container">
+    	<h2>How to use</h2>
+    	<p>Using this tool is simple and you should just pay attention to the units of measurement. The width of the nib is given in millimeters, the angle of the pen in degrees (not in radians) and the alphabet proportions should be placed in pen widths (but that, you certainly knew).</p>
+  		</div>
+	</div>
+
+	<div class="jumbotron">
+  		<div class="container">
+    	<h2>Help us</h2>
+    	<p>Please, if you saw a bug on the page, let us know by GitHub or e-mail. We would also like suggestions on what we can do to improve this tool... A better control of margins and space between guidelines? Guidelines for italics or pointed nibs? Write to us what you think about our tool.</p>
+  		</div>
+	</div>
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/guideline.js"></script>
+
+</body>
+</html>
